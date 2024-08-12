@@ -1,0 +1,242 @@
+To do:
+
+PART ONE:
+
+Test Case 1: Form Load
+Description: Verify that the form loads correctly.
+Steps to reproduce: 
+1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+2. Ensure that the form is displayed properly.
+Expected Result: The form should load with all fields visible and no broken elements.
+
+Test Case 2: All elements to be clickable 
+Description: Verify that the elements displayed on the form are clickable
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on back to shop button - should be redirected on another page on a new tab
+    4. Click on select your topic dropdown (on the previous tab where the form is displayed)
+    5. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    6. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    7. Text should be displayed when the arrow is expanded
+    8. When collapse arrow is clicked only the question should be visible.
+    9. Click on next button
+    10. All fields that are displayed should be mandatory
+    11. Click on next button without filling them in
+Expected Result: Until mandatory fields are not completely filled in to not be able to proceed and error messages to be displayed for each empty required field.
+
+Test Case 3: Fill in all the mandatory fields except captcha
+Description: All the mandatory fields on the form to be filled in, but captcha is not clicked
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on select your topic dropdown 
+    4. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    5. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    6. Text should be displayed when the arrow is expanded
+    7. When collapse arrow is clicked only the question should be visible.
+    8. Click on next button
+    9. All fields that are displayed should be mandatory
+    10. Fill in all mandatory fields with correct values
+    11. Click on next button
+Expected Result: To not be able to continue if captcha is not checked. Error message to complete the captcha should appear. 
+
+Test Case 4: Fill in all the mandatory fields and captcha
+Description: All the mandatory fields on the form to be filled in and captcha to be clicked
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on select your topic dropdown 
+    4. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    5. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    6. Text should be displayed when the arrow is expanded
+    7. When collapse arrow is clicked only the question should be visible.
+    8. Click on next button
+    9. All fields that are displayed should be mandatory
+    10. Fill in all mandatory fields with correct values
+    11. Check the I'm not a robot captcha checkbox
+    12. Click on next button
+Expected Result: To be able to finish the form submition. The following message for successful completion  should appear - Thank you for contacting us about your product. You will receive a confirmation in your email. We will process your request as soon as possible.
+
+Test Case 5: File upload
+Description: The file upload is not mandatory but we want to test it 
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on select your topic dropdown 
+    4. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    5. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    6. Text should be displayed when the arrow is expanded
+    7. When collapse arrow is clicked only the question should be visible.
+    8. Click on next button
+    9. All fields that are displayed should be mandatory
+    10. Fill in all mandatory fields with correct values
+    11. Click on upload files button
+    12. Select a file from your computer
+    13. After the file is uploaded success indicator should appear
+    14. Click on done button
+    15. Check the I'm not a robot captcha checkbox
+    16. Click on next button
+Expected Result: To be able to finish the form submition. The following message for successful completion  should appear - Thank you for contacting us about your product. You will receive a confirmation in your email. We will process your request as soon as possible.
+
+Test Case 6: Invalid email address
+Description: Test invalid email address format
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+    5. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    6. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    7. Text should be displayed when the arrow is expanded
+    8. When collapse arrow is clicked only the question should be visible.
+    9. Click on next button
+    10. All fields that are displayed should be mandatory
+    11. Fill in all mandatory fields with correct values
+    12. Fill in "email" and "verify email" fields with invalid values
+    13. Click on upload files button
+    14. Select a file from your computer
+    15. After the file is uploaded success indicator should appear
+    16. Click on done button
+    17. Check the I'm not a robot captcha checkbox
+    18. Click on next button
+Expected Result: "Please enter a valid email id" error message to appear below "email" field and to not be able to proceed without correcting it with the correct value.
+
+Test Case 7: Invalid verify email address 
+Description: Test invalid  verify email address field value
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+    5. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    6. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    7. Text should be displayed when the arrow is expanded
+    8. When collapse arrow is clicked only the question should be visible.
+    9. Click on next button
+    10. All fields that are displayed should be mandatory
+    11. Fill in all mandatory fields with correct values
+    12. Fill in "email" field  with correct value
+    13. Fill in "verify email" with incorrect value - not matching with "email" value
+    14. Click on upload files button
+    15. Select a file from your computer
+    16. After the file is uploaded success indicator should appear
+    17. Click on done button
+    18. Check the I'm not a robot captcha checkbox
+    19. Click on next button
+Expected Result: "Email & Verify EMail address should be same" error message to appear when verify email address field value is not matching with email value
+
+Test Case 8: Invalid Phone Number
+Description: Test invalid phone number format
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+    5. Click on the first option displayed on the dropdown called "Delivery, Return or Refund"
+    6. When list of questions with expand arrows next to them appear click on the first expand arrow 
+    7. Text should be displayed when the arrow is expanded
+    8. When collapse arrow is clicked only the question should be visible.
+    9. Click on next button
+    10. All fields that are displayed should be mandatory
+    11. Fill in all mandatory fields with correct values
+    12. Fill in phone number field with incorrect value (ex. type 111)
+    13. Click on upload files button
+    14. Select a file from your computer
+    15. After the file is uploaded success indicator should appear
+    16. Click on done button
+    17. Check the I'm not a robot captcha checkbox
+    18. Click on next button
+Expected Result: Error message to appear that the phone number format is incorrect
+!Important: Bug discovered when entering incorrect number format. The form is successfully submitted!
+
+Test Case 9: Invalid field length of first name field 
+Description: Test the field called "first name" with more than the reccomended max length which is usually 30 characters. I will try to enter 35 characters 
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+    4. Click on "Maintenance and Usage" option
+    5. Click on next button
+    6. Fill in all the mandatory fields with correct values
+    7. Fill in first name field with 35 characters 
+    8. Check the I'm not a robot captcha checkbox
+    9. Click on next
+Expected result: 
+The user should be prompted to enter less characters on first name field
+
+!Important: The actual result is that error message is displayed and it is saying "An unhandled fault has occurred in this flow
+An unhandled fault has occurred while processing the flow. Please contact your system administrator for more information." but this message is not intuitive for the user
+because it is not addressing that the issue is happening on first name field. 
+
+Test Case 10: Type only special characters in first name and last name fields 
+Description: The first name and last name fields to contain only special characters
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+    4. Click on "Order or payment related" option
+    5. Fill in all the mandatory fields
+    6. Type only special characters in first name and last name fields
+    7. Check in captcha checkbox and click on the required photo parts if requested
+    8. Click on next 
+Expected result: Error message saying that first name and last name field values are not valid
+!Important: Being able to save the form with incorrect first name and last name. 
+
+
+Test Case 11: Browser Compatibility 
+Description: test if the form will load in different browsers. I tested it on chrome, firefox and edge
+
+Steps to reproduce: 
+    1. Open the URL: https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+    2. Ensure that the form is displayed properly.
+    3. Click on "select your topic" dropdown 
+
+Expected result: Dropdown values to be displayed and clickable. This should work on different browsers
+
+
+If I had more time I would also check all the dropdown options from the form, insert some large file - larger than recommended size, test the case sensitivity, different formats for the names, whitespaces etc.
+I also tested the auto-fill it looked fine.
+
+
+PART TWO:
+* The following tests are strong candidates for automation:
+
+Test Case 1: Form Load
+
+Description: Verify that the form loads correctly.
+Motivation: Automating this test ensures that the form is consistently available and displayed correctly across test runs. Automated scripts can quickly verify the visibility and presence of key elements, reducing manual verification time and ensuring that any loading issues are promptly identified.
+
+Test Case 2: All Elements to be Clickable
+
+Description: Verify that all interactive elements on the form are clickable.
+Motivation: Automating this test is crucial for ensuring that all interactive elements (buttons, dropdowns, links) function as expected. Automated tests can simulate user interactions and verify that each element behaves correctly, which is especially useful for regression testing when new features or changes are introduced.
+
+
+Test Case 4: Fill in All Mandatory Fields and Captcha
+
+Description: Verify form submission with all mandatory fields and captcha filled in.
+Motivation: This test is a strong candidate for automation as it verifies the complete submission flow, including form validation and captcha. Automated tests can simulate user input, handle captcha interactions (if possible), and verify successful submission, ensuring end-to-end functionality is working correctly.
+
+
+Test Case 6: Invalid Email Address
+
+Description: Test the form with invalid email address format.
+Motivation: Automating this test ensures that invalid email addresses are consistently flagged by the system. Automation can quickly validate that the error handling is working properly, and the correct error messages are displayed.
+
+Test Case 9: Invalid Field Length of First Name Field
+
+Description: Test the first name field with more than the recommended max length.
+Motivation: Automating this test verifies that the system correctly enforces field length constraints. Automated tests can help ensure that such validation errors are detected and handled gracefully, reducing the risk of unexpected behavior or user-facing issues.
+
+Important note: Captcha is tricky to be automated. One of the workarounds to test this should be using test environments where CAPTCHA is disabled. 
+
+
+TASK DIFFICULTY LEVEL : medium
+TIME TAKEN TO SOLVE IT: 2.5 hours
+
+For which parts of the assignment did you use GPT model
+Answer: I used it to gain overall view of what is expected to be solved. 
+
+What prompts did you use
+Answer: create a comprehensive list of test cases for this link https://service.bugaboo.com/s/consumer-contact?selectedItem=Consumer_Contact_Form__c&language=en_US
+
+How the use of GPT tool affected the quality of your delivery and time to delivery
+Answer: It was useful and it gave me broader idea of the solution. It shortened the time that I would need usually to solve it. 
